@@ -8,10 +8,13 @@ class ApplicationController < ActionController::API
        # later on in this controller in the decoded_token method
        JWT.encode(payload, "1234")
     end 
-
+    # Helper function to check a request if there is an Authorization header
+    def auth_header 
+        request.headers['Authorization']
+    end 
+    
     # Check to see if this request has the auth header, and if the token passed in
     # is authenticated by the JWT decoding authentication
-
     def decoded_token
         if auth_header
     # label token from the header of the request, the first word will be Bearer by convention
@@ -19,9 +22,10 @@ class ApplicationController < ActionController::API
             token = auth_header.split(' ')[1]
             begin 
             # decode the token with your secret password/phrase
+            # This sequence is important to have the true and, for now, this algorithm
             JWT.decode(token, "1234", true, algorithm: 'HS256')
             rescue JWT::DecodeError
-            nil
+                nil
             end
         end 
     end 
