@@ -36,6 +36,8 @@ class AuthController < ApplicationController
             render json: {message: 'Invalid Email or Password'}, status: :unauthorized
         end 
     end 
+
+
     # Created this method to allow logging in automatically 
     def auto_login 
         @token = params[:token]

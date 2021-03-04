@@ -8,6 +8,7 @@ class UsersController < ApplicationController
     end 
 
     def create 
+        
         user = User.create(user_params)
 
         if user.valid?
@@ -17,10 +18,10 @@ class UsersController < ApplicationController
         end
     end
 
-    def destroy 
-        User.find(params[:id]).destroy 
-        render json: {}
-    end 
+    # def destroy 
+    #     User.find(params[:id]).destroy 
+    #     render json: {}
+    # end 
 
     private
 
