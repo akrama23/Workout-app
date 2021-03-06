@@ -13,11 +13,12 @@ class FavoritesController < ApplicationController
 
     def create 
         favorite = Favorite.create(favorite_params)
-        render json: favorite 
+        render json: favorite.workout, :include => :muscles
     end 
 
     def destroy 
-        Favorite.find(params[:id]).destroy 
+        # byebug
+        Favorite.find_by(user_id: params[:user_id], workout_id: params[:workout_id]).destroy
         render json: {"Deleted": "deleted"}
     end 
 
