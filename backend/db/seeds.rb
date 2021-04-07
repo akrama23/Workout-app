@@ -90,3 +90,6 @@ TargetMuscle.create(workout_id: workout10.id, muscle_id: m8.id)
 favorite1 = Favorite.create(user_id: user1.id , workout_id: workout1.id)
 favorite2 = Favorite.create(user_id: user1.id, workout_id: workout2.id)
 favorite3 = Favorite.create(user_id: user1.id, workout_id: workout3.id)
+
+
+#add more data for client side
