@@ -16,10 +16,10 @@ class TargetMusclesController < ApplicationController
         )
     end 
 
-    # def destroy 
-    #     TargetMuscle.find(params[:id]).destroy 
-    #     render json: {"Deleted": "deleted"}
-    # end 
+    def destroy 
+        TargetMuscle.find(params[:id]).destroy 
+        render json: {"Deleted": "deleted"}
+    end 
 
     private
     def target_muscle_params 

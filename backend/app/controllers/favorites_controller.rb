@@ -17,7 +17,6 @@ class FavoritesController < ApplicationController
     end 
 
     def destroy 
-        # byebug
         Favorite.find_by(user_id: params[:user_id], workout_id: params[:workout_id]).destroy
         render json: {"Deleted": "deleted"}
     end 

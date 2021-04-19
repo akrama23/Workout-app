@@ -47,40 +47,40 @@ class WorkoutsController < ApplicationController
         # render json: workout, :include => [:muscles]
     end 
 
-    # def update 
-    #     workout = Workout.find(params[:id])
-    #     workout.update(workout_params)
-    #     render json: workout.to_json(
-    #        :include => {
-    #              :target_muscles => {
-    #                 :include => {
-    #                    :muscle => {:only => [:name]}
-    #                 }
-    #               }
-    #           }, :except => [:updated_at, :created_at]
-    #        )
-    # end 
+    def update 
+        workout = Workout.find(params[:id])
+        workout.update(workout_params)
+        render json: workout.to_json(
+           :include => {
+                 :target_muscles => {
+                    :include => {
+                       :muscle => {:only => [:name]}
+                    }
+                  }
+              }, :except => [:updated_at, :created_at]
+           )
+    end 
 
-    # def destroy 
-    #     workout = Workout.find(params[:id]).destroy
-    #     render json: Workout.all.to_json(workout_serializer)
-    # end 
+    def destroy 
+        workout = Workout.find(params[:id]).destroy
+        render json: Workout.all.to_json(workout_serializer)
+    end 
 
 
     private 
 
-    # def workout_serializer
-    #     {
-    #         :include => {
-    #            :target_muscles => {
-    #               :include => {
-    #                  :muscle => {:only => [:name]}
-    #               } 
-    #             }, :except => [:workout_id, :muscle_id, :id]
-    #         }
-    #      }
+    def workout_serializer
+        {
+            :include => {
+               :target_muscles => {
+                  :include => {
+                     :muscle => {:only => [:name]}
+                  } 
+                }, :except => [:workout_id, :muscle_id, :id]
+            }
+         }
 
-    # end 
+    end 
 
     def workout_params 
         params.require(:workout).permit(:name, :description, :image, :video)
