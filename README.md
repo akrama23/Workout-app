@@ -18,3 +18,7 @@ Clone down front-end here ---> https://github.com/akrama23/Client-Workout-App
 -Run 'bundle install'
 -Run 'rails s' to get started 
 
+##LinkedIn 
+https://www.linkedin.com/in/akram-a/
+##Blog--Medium
+https://akramalam.medium.com/
