@@ -22,3 +22,6 @@ Clone down front-end here ---> https://github.com/akrama23/Client-Workout-App
 https://www.linkedin.com/in/akram-a/
 ##Blog--Medium
 https://akramalam.medium.com/
+
+#currently working on
+-creating authorized routes with user/newuser
