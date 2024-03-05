@@ -17,15 +17,19 @@ Clone down front-end here ---> https://github.com/akrama23/Client-Workout-App
 
 ● Implemented the user interface with fully CSS styling
 
-#How-to Install 
--First clone down to local machine
+# How-to clone back-end step by step
+
+1.First clone down to local machine
+
 -Cd into the backend folder
+
 -Run 'bundle install'
+
 -Run 'rails s' to get started 
 
-##LinkedIn 
+## LinkedIn 
+
 https://www.linkedin.com/in/akram-a/
-##Blog--Medium
-https://akramalam.medium.com/
+
 
 
