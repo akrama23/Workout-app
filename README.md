@@ -20,13 +20,17 @@ Clone down front-end here ---> https://github.com/akrama23/Client-Workout-App
 
 # How-to clone back-end step by step
 
-1.First clone down to local machine
+1. First clone down to local machine
 
--Cd into the backend folder
+2. Cd into the backend folder
 
--Run 'bundle install'
+3. Run 'bundle install'
 
--Run 'rails s' to get started 
+4. Run 'Rails db migrate'
+   
+5. Run 'rails s' to get started
+   
+6. After back-end is running, start the front-end server:  https://github.com/akrama23/Client-Workout-App 
 
 ## LinkedIn 
 
